@@ -1,0 +1,25 @@
+/* File: src/components/YouTubeBackground.css */
+
+.yt-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.yt-video iframe {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.yt-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  top: 40%;
+}

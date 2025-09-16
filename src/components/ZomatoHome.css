@@ -1,0 +1,28 @@
+.zomato-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}

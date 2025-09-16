@@ -1,0 +1,12 @@
+.animated-collapse {
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.navbar-collapse.collapsing {
+  max-height: 0;
+}
+
+.navbar-collapse.show {
+  max-height: 500px; /* adjust based on menu content height */
+}

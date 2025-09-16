@@ -1,0 +1,38 @@
+.login-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.login-left {
+  flex: 1;
+  background-image: url("/MyPizzaApp/public/images/bgpizza.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 3rem;
+}
+
+.overlay-text {
+  margin: auto;
+  text-shadow: 1px 1px 5px black;
+}
+
+.login-right {
+  flex: 1;
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-left {
+    display: none;
+  }
+  .login-right {
+    flex: 1;
+  }
+}
