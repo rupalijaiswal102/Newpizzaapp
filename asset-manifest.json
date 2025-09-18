@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Newpizzaapp/static/css/main.53fbee8c.css",
-    "main.js": "/Newpizzaapp/static/js/main.322a31dd.js",
+    "main.js": "/Newpizzaapp/static/js/main.de2fa1b3.js",
     "static/js/453.410e70c2.chunk.js": "/Newpizzaapp/static/js/453.410e70c2.chunk.js",
     "static/media/bgpizza.jpg": "/Newpizzaapp/static/media/bgpizza.b751c3fcdac78fdb1f26.jpg",
     "static/media/bootstrap-icons.woff?": "/Newpizzaapp/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
@@ -12,11 +12,11 @@
     "static/media/fa-v4compatibility.woff2": "/Newpizzaapp/static/media/fa-v4compatibility.661bd6b7245d5205d3e1.woff2",
     "index.html": "/Newpizzaapp/index.html",
     "main.53fbee8c.css.map": "/Newpizzaapp/static/css/main.53fbee8c.css.map",
-    "main.322a31dd.js.map": "/Newpizzaapp/static/js/main.322a31dd.js.map",
+    "main.de2fa1b3.js.map": "/Newpizzaapp/static/js/main.de2fa1b3.js.map",
     "453.410e70c2.chunk.js.map": "/Newpizzaapp/static/js/453.410e70c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53fbee8c.css",
-    "static/js/main.322a31dd.js"
+    "static/js/main.de2fa1b3.js"
   ]
 }
