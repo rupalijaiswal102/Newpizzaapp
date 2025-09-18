@@ -1,5 +1,6 @@
 // src/pages/OurMenu.jsx
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 class OurMenu extends Component{
     state={
         data:this.props.data
@@ -49,9 +50,7 @@ let { sampleMenu } = this.props;
 
                 <p className="card-text small text-white">{item.desc}</p>
 
-                <button className="btn btn-light w-50 mt-2 text-danger" onClick={() => window.location.href = item.link}>
-                  View All
-                </button>
+               <Link to={item.link} className="btn btn-light w-50 mt-2 text-danger">View All</Link>
               </div>
             </div>
           </div>

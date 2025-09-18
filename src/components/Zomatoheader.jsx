@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Navbar, Nav, Form, FormControl, InputGroup,FormSelect } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { render } from '@testing-library/react';
 
 
 const ZomatoHeader =({ totalQty,getlocations })=>{

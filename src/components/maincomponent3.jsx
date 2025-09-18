@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ZomatoHeader from "./Zomatoheader";
 import Pizza from "./pizza";
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {Routes, Route, Navigate } from 'react-router-dom';
 import OtherItems from "./othersItem";
 import NonVegPizza from "./nonveg";
 import SideDishes from "./sideDish";
@@ -14,10 +14,13 @@ import OurMenu  from "./OurMenu";
 import ZomatoHome from "./ZomatoHome";
 import Contact from "./Contact";
 import Navbar2 from "./Navbar2"
-import FirstPage from "./Firstpage";
+
+import Slider from "./Slider";
 
 
-import { type } from "@testing-library/user-event/dist/type";
+
+
+
 class MainComponent3 extends Component{
     state={
       sampleMenu: [
@@ -265,7 +268,7 @@ items :[
     }
     <div className="content">
       <Routes>
-  <Route path="/" element={<ZomatoHome />} />
+  <Route path="/" element={<Slider />} />
   <Route path="/OurMenu" element={<OurMenu sampleMenu={sampleMenu} />} />
   <Route
     path="/pizza"
