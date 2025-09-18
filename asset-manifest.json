@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rupalijaiswal102/Newpizzaapp.git/static/css/main.398a949f.css",
-    "main.js": "/rupalijaiswal102/Newpizzaapp.git/static/js/main.43b123c4.js",
-    "static/js/453.410e70c2.chunk.js": "/rupalijaiswal102/Newpizzaapp.git/static/js/453.410e70c2.chunk.js",
-    "static/media/bgpizza.jpg": "/rupalijaiswal102/Newpizzaapp.git/static/media/bgpizza.b751c3fcdac78fdb1f26.jpg",
-    "static/media/bootstrap-icons.woff?": "/rupalijaiswal102/Newpizzaapp.git/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
-    "static/media/bootstrap-icons.woff2?": "/rupalijaiswal102/Newpizzaapp.git/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
-    "static/media/fa-solid-900.woff2": "/rupalijaiswal102/Newpizzaapp.git/static/media/fa-solid-900.0ae4e6254fc19607c79e.woff2",
-    "static/media/fa-brands-400.woff2": "/rupalijaiswal102/Newpizzaapp.git/static/media/fa-brands-400.e7461d69dbbff1310a5c.woff2",
-    "static/media/fa-regular-400.woff2": "/rupalijaiswal102/Newpizzaapp.git/static/media/fa-regular-400.1f38a564cd9eae27ebc3.woff2",
-    "static/media/fa-v4compatibility.woff2": "/rupalijaiswal102/Newpizzaapp.git/static/media/fa-v4compatibility.661bd6b7245d5205d3e1.woff2",
-    "index.html": "/rupalijaiswal102/Newpizzaapp.git/index.html",
-    "main.398a949f.css.map": "/rupalijaiswal102/Newpizzaapp.git/static/css/main.398a949f.css.map",
-    "main.43b123c4.js.map": "/rupalijaiswal102/Newpizzaapp.git/static/js/main.43b123c4.js.map",
-    "453.410e70c2.chunk.js.map": "/rupalijaiswal102/Newpizzaapp.git/static/js/453.410e70c2.chunk.js.map"
+    "main.css": "/Newpizzaapp/static/css/main.53fbee8c.css",
+    "main.js": "/Newpizzaapp/static/js/main.322a31dd.js",
+    "static/js/453.410e70c2.chunk.js": "/Newpizzaapp/static/js/453.410e70c2.chunk.js",
+    "static/media/bgpizza.jpg": "/Newpizzaapp/static/media/bgpizza.b751c3fcdac78fdb1f26.jpg",
+    "static/media/bootstrap-icons.woff?": "/Newpizzaapp/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/Newpizzaapp/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/fa-solid-900.woff2": "/Newpizzaapp/static/media/fa-solid-900.0ae4e6254fc19607c79e.woff2",
+    "static/media/fa-brands-400.woff2": "/Newpizzaapp/static/media/fa-brands-400.e7461d69dbbff1310a5c.woff2",
+    "static/media/fa-regular-400.woff2": "/Newpizzaapp/static/media/fa-regular-400.1f38a564cd9eae27ebc3.woff2",
+    "static/media/fa-v4compatibility.woff2": "/Newpizzaapp/static/media/fa-v4compatibility.661bd6b7245d5205d3e1.woff2",
+    "index.html": "/Newpizzaapp/index.html",
+    "main.53fbee8c.css.map": "/Newpizzaapp/static/css/main.53fbee8c.css.map",
+    "main.322a31dd.js.map": "/Newpizzaapp/static/js/main.322a31dd.js.map",
+    "453.410e70c2.chunk.js.map": "/Newpizzaapp/static/js/453.410e70c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.398a949f.css",
-    "static/js/main.43b123c4.js"
+    "static/css/main.53fbee8c.css",
+    "static/js/main.322a31dd.js"
   ]
 }
