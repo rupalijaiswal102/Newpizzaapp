@@ -268,7 +268,7 @@ items :[
     }
     <div className="content">
       <Routes>
-  <Route path="/" element={<Slider />} />
+  <Route path="/" element={<OurMenu />} />
   <Route path="/OurMenu" element={<OurMenu sampleMenu={sampleMenu} />} />
   <Route
     path="/pizza"
