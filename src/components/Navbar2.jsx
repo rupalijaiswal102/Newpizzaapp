@@ -14,7 +14,7 @@ const Navbar2 = ({ totalQty, getlocations }) => {
       }}
     >
       <Container fluid>
-        <Navbar.Brand as={Link} to="/ZomatoHome" className="fw-bold">
+        <Navbar.Brand as={Link} to="/OurMenu" className="fw-bold">
           🍕My Pizza's
         </Navbar.Brand>
 
