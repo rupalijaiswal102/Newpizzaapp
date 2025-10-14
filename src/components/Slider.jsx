@@ -1,7 +1,5 @@
-import React from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";  // <-- this is required
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; 
 import { NavLink } from 'react-router-dom';
 
 
@@ -12,7 +10,7 @@ const Slider = () => {
   className="carousel slide"
 >
   <div className="carousel-inner" style={{height:"800px",width:"100%"}}>
-    <div className="carousel-item active" data-bs-interval="10000">
+    <div className="carousel-item " data-bs-interval="10000">
       <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jvkj4a2eexgt7bv3mf02vy0w%2F1747634612_img_0.webp?st=2025-09-17T16%3A20%3A56Z&se=2025-09-23T17%3A20%3A56Z&sks=b&skt=2025-09-17T16%3A20%3A56Z&ske=2025-09-23T17%3A20%3A56Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=b4ab33b8-2ad4-40af-8ed0-a2b350b6603c&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=K68EeoSxTXG%2BaP2%2F9JeaKwC%2FPQHmozUNWabCR0GWoG8%3D&az=oaivgprodscus"
        className="d-block w-100" alt="Pizza" />
        <div class="carousel-caption d-none d-md-block text-dark ">
@@ -20,7 +18,7 @@ const Slider = () => {
         <p>Indulge in our hot, cheesy pizza loaded with gooey mozzarella and irresistible flavors." 🍕</p>
       </div>
     </div>
-    <div className="carousel-item">
+    <div className="carousel-item active">
         <video autoPlay muted loop className="bg-video border d-flex  "
       style={{
   position: "absolute",

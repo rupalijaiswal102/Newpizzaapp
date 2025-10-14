@@ -1,0 +1,76 @@
+/* === Our Menu Page Styling === */
+
+.menu-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay to darken background */
+.menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Content */
+.menu-content {
+  position: relative;
+  z-index: 2;
+}
+
+.menu-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive text & layout */
+@media (max-width: 768px) {
+  .menu-card {
+    min-height: 400px;
+  }
+  .menu-img {
+    height: 160px;
+  }
+  .menu-content h4 {
+    font-size: 1.1rem;
+  }
+  .menu-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-card {
+    min-height: 360px;
+  }
+  .menu-img {
+    height: 150px;
+  }
+  .menu-content h4 {
+    font-size: 1rem;
+  }
+  .menu-content p {
+    font-size: 0.8rem;
+  }
+}

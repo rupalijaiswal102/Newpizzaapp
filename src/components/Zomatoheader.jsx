@@ -1,83 +1,101 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Navbar, Nav, Form, FormControl, InputGroup,FormSelect } from 'react-bootstrap';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import {
+  Container,
+  Navbar,
+  Nav,
+  Form,
+  InputGroup,
+  FormSelect,
+} from "react-bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./ZomatoHeader.css"; // Add CSS below
 
-
-const ZomatoHeader =({ totalQty,getlocations })=>{
-  
+const ZomatoHeader = ({ totalQty, getlocations }) => {
   return (
-    <Navbar expand="lg"  fixed="top " variant="dark" 
-          style={{
-        backgroundColor:'#006491', 
-        color: '#ffffff',
-        height: '90px', // increase navbar height
-        borderBottom: '2px solid #ccc', // optional border
-      }}
-
+    <Navbar
+      expand="lg"
+      fixed="top"
+      variant="dark"
+      className="custom-navbar shadow-sm"
     >
-      <Container fluid>
+      <Container fluid className="px-3 px-lg-5">
+        {/* ===== Brand / Logo ===== */}
+        <Navbar.Brand as={Link} to="/Home" className="fw-bold brand-title">
+          🍕 My Pizza's
+        </Navbar.Brand>
 
-        <Nav.Link as={Link} to="/FirstPage" className="navbar-brand fw-bold nav-viewer-header__menu-bg"> 🍕My Pizza's</Nav.Link>
+        {/* ===== Hamburger Toggle ===== */}
+        <Navbar.Toggle
+          aria-controls="zomato-navbar"
+          className="border-0 shadow-none"
+        >
+          <i className="bi bi-list fs-2 text-white"></i>
+        </Navbar.Toggle>
 
+        {/* ===== Collapsible Section ===== */}
+        <Navbar.Collapse id="zomato-navbar" className="animated-collapse">
+          {/* ===== Location Dropdown ===== */}
+          <Form className="d-flex align-items-center mt-3 mt-lg-0 mb-3 mb-lg-0 me-lg-4">
+            <InputGroup style={{ maxWidth: "220px" }}>
+              <InputGroup.Text>📍</InputGroup.Text>
+              <FormSelect className="form-select-sm">
+                <option value="">Select location</option>
+                {getlocations.map((loc, index) => (
+                  <option key={index} value={loc}>
+                    {loc}
+                  </option>
+                ))}
+              </FormSelect>
+            </InputGroup>
+          </Form>
 
+          {/* ===== Navigation Links ===== */}
+          <Nav className="mx-auto text-center nav-links">
+            {[
+              { to: "/OurMenu", label: "OUR MENU" },
+              { to: "/Contact", label: "CONTACT" },
+              { to: "/pizza", label: "Veg Pizza" },
+              { to: "/nonveg", label: "Non Veg Pizza" },
+              { to: "/sideDish", label: "Side Dishes" },
+              { to: "/othersItem", label: "Other Items" },
+            ].map((link, index) => (
+              <Nav.Link
+                key={index}
+                as={Link}
+                to={link.to}
+                className="text-white fs-6 fw-semibold px-3 nav-item-link"
+              >
+                {link.label}
+              </Nav.Link>
+            ))}
+          </Nav>
 
-        <Navbar.Toggle aria-controls="zomato-navbar" />
+          {/* ===== Right-side: Sign In + Cart ===== */}
+          <Nav className="ms-auto d-flex align-items-center justify-content-center gap-3 mt-3 mt-lg-0">
+            {/* Sign In */}
+            <Nav.Link
+              as={Link}
+              to="/Zomatologin"
+              className="text-white fw-semibold d-flex align-items-center"
+            >
+              <i className="bi bi-person-circle fs-5 me-2"></i>
+              Sign In
+            </Nav.Link>
 
-
-        <Navbar.Collapse id="zomato-navbar" className="justify-content-end pe-5">
-
-        <Form className="d-flex flex-grow-1 mx-4 gap-2 align-items-center " >
-      <InputGroup style={{ maxWidth: '200px' }}>
-        <InputGroup.Text>📍</InputGroup.Text>
-        <FormSelect>
-          <option value="">Select location</option>
-          {getlocations.map((loc, index) => (
-            <option key={index} value={loc}>
-              {loc}
-            </option>
-          ))}
-        </FormSelect>
-       
-      </InputGroup>
-    </Form>
-    
-                 <Nav className="ms-auto nav-item px-3 ">
-            <Nav.Link  className="nav-link fs-5 text-white" as={Link} to="/OurMenu">
-              OUR MENU
+            {/* Cart */}
+            <Nav.Link
+              as={Link}
+              to="/CartPage"
+              className="position-relative text-white fw-semibold d-flex align-items-center"
+            >
+              <i className="bi bi-cart-fill fs-5 me-2"></i>
+              Cart
+              <span className="cart-badge badge rounded-pill bg-danger">
+                {totalQty}
+              </span>
             </Nav.Link>
           </Nav>
-          <Nav className="nav-link fs-5">
-            <Nav.Link  className="nav-link fs-5 text-white" as={Link} to="/Contact">
-              CONTACT
-            </Nav.Link>
-            </Nav>
-          {/* Navigation Links 
-          <Nav className="me-auto nav-item px-3">
-             <Nav.Link className="nav-link fs-5" as={Link} to="/OurMenu">Our Menu</Nav.Link>
-            <Nav.Link className="nav-link fs-5" as={Link} to="/pizza">Veg Pizza</Nav.Link>
-            <Nav.Link  className="nav-link fs-5" as={Link} to="/nonveg">Non Veg Pizza</Nav.Link>
-            <Nav.Link className="nav-link fs-5" as={Link} to="/sideDish">Side Dishes</Nav.Link>
-            <Nav.Link className="nav-link fs-5" as={Link} to="/othersItem">Others Items</Nav.Link>
-          </Nav>*/}
-
-          {/* Sign In Button */}
-          <Nav className="ms-auto">
-            <Nav.Link  className="nav-link fs-5" as={Link} to="/Zomatologin">
-              <i className="bi bi-person-fill me-2 text-white"></i>Sign In
-            </Nav.Link>
-          </Nav>
-            
-          
-         <Nav.Link  as={Link} to="/CartPage" className="position-relative nav-link fs-5">
-    <i className="bi bi-cart-fill me-1 fs-5"></i>
-    Cart
-    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-{ totalQty }
-      <span className="visually-hidden">items in cart</span>
-    </span>
-  </Nav.Link>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>

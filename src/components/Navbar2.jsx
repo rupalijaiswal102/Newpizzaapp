@@ -1,61 +1,97 @@
 import { Link } from "react-router-dom";
-import { Container, Navbar, Nav, Form, InputGroup, FormSelect } from 'react-bootstrap';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import './ZomatoHeader.css'; // We'll add animation CSS here
+import {
+  Container,
+  Navbar,
+  Nav,
+  Form,
+  InputGroup,
+  FormSelect,
+} from "react-bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./ZomatoHeader.css"; // Custom styling
 
 const Navbar2 = ({ totalQty, getlocations }) => {
   return (
-    <Navbar expand="lg" fixed="top" variant="dark"
-      style={{
-        backgroundColor: '#006491',
-        color: '#ffffff',
-        height: '90px',
-        borderBottom: '2px solid #ccc',
-      }}
+    <Navbar
+      expand="lg"
+      fixed="top"
+      variant="dark"
+      className="custom-navbar shadow-sm"
     >
-      <Container fluid>
-        <Navbar.Brand as={Link} to="/ZomatoHome" className="fw-bold">
-          🍕My Pizza's
+      <Container fluid className="px-3 px-lg-5">
+        {/* ===== Brand / Logo ===== */}
+        <Navbar.Brand as={Link} to="/Home" className="fw-bold brand-title">
+          🍕 My Pizza's
         </Navbar.Brand>
 
-        {/* Hamburger toggle */}
-        <Navbar.Toggle aria-controls="zomato-navbar" />
+        {/* ===== Hamburger toggle ===== */}
+        <Navbar.Toggle
+          aria-controls="zomato-navbar"
+          className="border-0 shadow-none"
+        >
+          <i className="bi bi-list fs-2 text-white"></i>
+        </Navbar.Toggle>
 
+        {/* ===== Collapsible Section ===== */}
         <Navbar.Collapse id="zomato-navbar" className="animated-collapse">
-          {/* Left-side items: location selector */}
-          <Form className="d-flex flex-grow-1 mb-2 mb-lg-0">
-            <InputGroup style={{ maxWidth: '200px' }}>
+          {/* ===== Location Dropdown ===== */}
+          <Form className="d-flex align-items-center mt-3 mt-lg-0 mb-3 mb-lg-0 me-lg-4">
+            <InputGroup style={{ maxWidth: "220px" }}>
               <InputGroup.Text>📍</InputGroup.Text>
-              <FormSelect>
+              <FormSelect className="form-select-sm">
                 <option value="">Select location</option>
                 {getlocations.map((loc, index) => (
-                  <option key={index} value={loc}>{loc}</option>
+                  <option key={index} value={loc}>
+                    {loc}
+                  </option>
                 ))}
               </FormSelect>
             </InputGroup>
           </Form>
 
-          {/* Center nav links */}
-          <Nav className="mx-auto flex-column flex-lg-row text-center">
-            <Nav.Link as={Link} to="/OurMenu" className="text-white fs-5 px-2">OUR MENU</Nav.Link>
-            <Nav.Link as={Link} to="/Contact" className="text-white fs-5 px-2">CONTACT</Nav.Link>
-            <Nav.Link as={Link} to="/pizza" className="text-white fs-5 px-2">Veg Pizza</Nav.Link>
-            <Nav.Link as={Link} to="/nonveg" className="text-white fs-5 px-2">Non Veg Pizza</Nav.Link>
-            <Nav.Link as={Link} to="/sideDish" className="text-white fs-5 px-2">Side Dishes</Nav.Link>
-            <Nav.Link as={Link} to="/othersItem" className="text-white fs-5 px-2">Other Items</Nav.Link>
+          {/* ===== Center Nav Links ===== */}
+          <Nav className="mx-auto text-center nav-links">
+            {[
+              { to: "/OurMenu", label: "OUR MENU" },
+              { to: "/Contact", label: "CONTACT" },
+              { to: "/pizza", label: "Veg Pizza" },
+              { to: "/nonveg", label: "Non Veg Pizza" },
+              { to: "/sideDish", label: "Side Dishes" },
+              { to: "/othersItem", label: "Other Items" },
+            ].map((link, index) => (
+              <Nav.Link
+                key={index}
+                as={Link}
+                to={link.to}
+                className="text-white fs-6 fw-semibold px-3 nav-item-link"
+              >
+                {link.label}
+              </Nav.Link>
+            ))}
           </Nav>
 
-          {/* Right-side items: Sign-in and Cart */}
-          <Nav className="ms-auto flex-column flex-lg-row align-items-center mt-2 mt-lg-0 text-center">
-            <Nav.Link as={Link} to="/Zomatologin" className="text-white fs-5 px-2">
-              <i className="bi bi-person-fill me-2"></i>Sign In
+          {/* ===== Right-side: Sign-in + Cart ===== */}
+          <Nav className="ms-auto d-flex align-items-center justify-content-center gap-3 mt-3 mt-lg-0">
+            {/* Sign In */}
+            <Nav.Link
+              as={Link}
+              to="/Zomatologin"
+              className="text-white fw-semibold d-flex align-items-center"
+            >
+              <i className="bi bi-person-circle fs-5 me-2"></i>
+              Sign In
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/CartPage" className="position-relative text-white fs-4 px-1">
-              <i className="bi bi-cart-fill me-1"></i>Cart
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {/* Cart */}
+            <Nav.Link
+              as={Link}
+              to="/CartPage"
+              className="position-relative text-white fw-semibold d-flex align-items-center"
+            >
+              <i className="bi bi-cart-fill fs-5 me-2"></i>
+              Cart
+              <span className="cart-badge badge rounded-pill bg-danger">
                 {totalQty}
-                <span className="visually-hidden">items in cart</span>
               </span>
             </Nav.Link>
           </Nav>

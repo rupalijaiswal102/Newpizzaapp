@@ -1,12 +1,100 @@
+/* === Navbar Styling === */
+.custom-navbar {
+  background-color: #006491 !important;
+  color: #fff !important;
+  min-height: 80px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* === Brand Styling === */
+.brand-title {
+  font-size: 1.7rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.brand-title:hover {
+  transform: scale(1.05);
+  color: #ffd700 !important;
+}
+
+/* === Animated Navbar Collapse === */
 .animated-collapse {
-  transition: max-height 0.5s ease-in-out;
-  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-.navbar-collapse.collapsing {
-  max-height: 0;
+/* === Navigation Links === */
+.nav-links .nav-item-link {
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.navbar-collapse.show {
-  max-height: 500px; /* adjust based on menu content height */
+.nav-links .nav-item-link:hover {
+  color: #ffcc00 !important;
 }
+
+.nav-links .nav-item-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  height: 2px;
+  background: #ffcc00;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links .nav-item-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* === Cart Badge === */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  font-size: 0.75rem;
+  padding: 4px 7px;
+  background-color: #e63946;
+  color: #fff;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 991px) {
+  .custom-navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links .nav-item-link {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links .nav-item-link::after {
+    display: none;
+  }
+
+  .brand-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-navbar {
+    min-height: 70px;
+  }
+
+  .brand-title {
+    font-size: 1.2rem;
+  }
+
+  .cart-badge {
+    top: -8px;
+    right: -10px;
+    font-size: 0.65rem;
+  }
+}
+

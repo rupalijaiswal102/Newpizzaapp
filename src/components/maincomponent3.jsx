@@ -16,7 +16,7 @@ import Contact from "./Contact";
 import Navbar2 from "./Navbar2"
 
 import Slider from "./Slider";
-
+import Home from "./Home"
 
 
 
@@ -268,7 +268,7 @@ items :[
     }
     <div className="content">
       <Routes>
-  <Route path="/" element={<Slider />} />
+  <Route path="/" element={<Home />} />
   <Route path="/OurMenu" element={<OurMenu sampleMenu={sampleMenu} />} />
   <Route
     path="/pizza"
