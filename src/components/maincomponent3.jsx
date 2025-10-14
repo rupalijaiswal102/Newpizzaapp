@@ -268,11 +268,7 @@ items :[
     }
     <div className="content">
       <Routes>
-<<<<<<< HEAD
   <Route path="/" element={<Home />} />
-=======
-  <Route path="/" element={<OurMenu />} />
->>>>>>> d385d184dfc297be3e3137d3476b737cf2a3c131
   <Route path="/OurMenu" element={<OurMenu sampleMenu={sampleMenu} />} />
   <Route
     path="/pizza"
