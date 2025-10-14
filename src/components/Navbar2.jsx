@@ -18,10 +18,16 @@ const Navbar2 = ({ totalQty, getlocations }) => {
       variant="dark"
       className="custom-navbar shadow-sm"
     >
+<<<<<<< HEAD
       <Container fluid className="px-3 px-lg-5">
         {/* ===== Brand / Logo ===== */}
         <Navbar.Brand as={Link} to="/Home" className="fw-bold brand-title">
           🍕 My Pizza's
+=======
+      <Container fluid>
+        <Navbar.Brand as={Link} to="/OurMenu" className="fw-bold">
+          🍕My Pizza's
+>>>>>>> d385d184dfc297be3e3137d3476b737cf2a3c131
         </Navbar.Brand>
 
         {/* ===== Hamburger toggle ===== */}
