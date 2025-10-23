@@ -1,0 +1,38 @@
+/* 🌞 Light Theme */
+.pizza-card {
+  background-color: #dc3545; /* Bootstrap danger */
+  color: white;
+}
+
+/* 🌙 Dark Mode (auto-detect) */
+@media (prefers-color-scheme: dark) {
+  .pizza-card {
+    background-color: #222;
+    color: #f5f5f5;
+    border: 1px solid #444;
+  }
+
+  .pizza-card h5,
+  .pizza-card h6 {
+    color: #fff;
+  }
+
+  .pizza-desc {
+    color: #ccc;
+  }
+
+  .pizza-card img {
+    border-color: #555;
+  }
+
+  .btn-light.text-danger {
+    background-color: #f5f5f5;
+    color: #b30000 !important;
+  }
+
+  .form-control {
+    background-color: #333;
+    color: white;
+    border-color: #666;
+  }
+}

@@ -1,0 +1,32 @@
+/* 🌞 Default Light Theme */
+.item-card {
+  background-color: #dc3545; /* Bootstrap danger red */
+  color: white;
+}
+
+/* 🌙 Auto Dark Mode (follows system preference) */
+@media (prefers-color-scheme: dark) {
+  .item-card {
+    background-color: #222;
+    color: #f5f5f5;
+    border: 1px solid #444;
+  }
+
+  .item-card h5,
+  .item-card h6 {
+    color: #fff;
+  }
+
+  .item-desc {
+    color: #ccc;
+  }
+
+  .item-card img {
+    border-color: #555;
+  }
+
+  .btn-light.text-danger {
+    background-color: #f5f5f5;
+    color: #b30000 !important;
+  }
+}

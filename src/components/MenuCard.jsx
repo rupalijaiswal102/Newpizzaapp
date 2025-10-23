@@ -1,41 +1,27 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./MenuCard.css";
 
-class OtherItems extends Component {
-  state = {};
-
-  addtocart = (index) => {
-    this.props.onaddtocart(index);
-  };
-
-  add = (id) => {
-    this.props.onAdd(id);
-  };
-
-  sub = (id) => {
-    this.props.onSub(id);
-  };
-
+class MenuCard extends Component {
   render() {
-    const { items, cart } = this.props;
+    const { title, items, cart, filterTypes, onAdd, onSub, onAddToCart } = this.props;
 
     return (
       <div className="container mt-5 p-3 p-md-5">
         <h2 className="text-center text-danger fw-bold mb-4 mb-md-5">
-          Other Items
+          {title}
         </h2>
 
         <div className="row justify-content-center">
-          {items.map((d1, index) =>
-            d1.type === "Beverage" ||
-            d1.type === "Burger Pizza" ||
-            d1.type === "Dessert" ? (
+          {items
+            .filter((item) => filterTypes.includes(item.type))
+            .map((d1, index) => (
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
                 key={d1.id}
               >
                 <div
-                  className="text-center border rounded-4 p-3 shadow-sm h-100 d-flex flex-column justify-content-between item-card"
+                  className="text-center border rounded-4 p-3 shadow-sm h-100 d-flex flex-column justify-content-between menu-card"
                   style={{
                     transition: "transform 0.3s ease",
                     cursor: "pointer",
@@ -62,10 +48,8 @@ class OtherItems extends Component {
                   <div>
                     <h5 className="fw-bold">{d1.name}</h5>
                     <p
-                      className="small item-desc"
-                      style={{
-                        minHeight: "50px",
-                      }}
+                      className="small menu-desc"
+                      style={{ minHeight: "50px" }}
                     >
                       {d1.desc}
                     </p>
@@ -76,7 +60,7 @@ class OtherItems extends Component {
                     <div className="d-flex justify-content-center align-items-center gap-2 mt-2">
                       <button
                         className="btn btn-light btn-sm rounded-circle fw-bold"
-                        onClick={() => this.sub(d1.id)}
+                        onClick={() => onSub(d1.id)}
                       >
                         −
                       </button>
@@ -85,7 +69,7 @@ class OtherItems extends Component {
                       </button>
                       <button
                         className="btn btn-success btn-sm rounded-circle fw-bold"
-                        onClick={() => this.add(d1.id)}
+                        onClick={() => onAdd(d1.id)}
                       >
                         +
                       </button>
@@ -93,19 +77,18 @@ class OtherItems extends Component {
                   ) : (
                     <button
                       className="btn btn-light text-danger fw-semibold mt-3"
-                      onClick={() => this.addtocart(index)}
+                      onClick={() => onAddToCart(index)}
                     >
                       ORDER NOW
                     </button>
                   )}
                 </div>
               </div>
-            ) : null
-          )}
+            ))}
         </div>
       </div>
     );
   }
 }
 
-export default OtherItems;
+export default MenuCard;
