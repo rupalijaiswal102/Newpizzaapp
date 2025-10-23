@@ -14,7 +14,7 @@ class SideDishes extends Component{
         let {items,view,cart}=this.props
         
         return(<div className="container mt-5 p-5">
-          <h2 className="text-center text-danger fw-bold mb-5 "> Others Items
+          <h2 className="text-center text-danger fw-bold mb-5 "> SIDE DISHES
 </h2>
           <div className="row ">
     <div className="col-12">

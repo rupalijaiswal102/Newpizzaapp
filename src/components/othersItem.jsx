@@ -15,7 +15,7 @@ class OtherItems extends Component{
         
         return (
   <div className="container mt-5 p-5">
-              <h2 className="text-center text-danger fw-bold mb-5 ">Sides & Beverages
+              <h2 className="text-center text-danger fw-bold mb-5 ">Other Items
 </h2>
     <div className="row">
       <div className="col-12 ">
