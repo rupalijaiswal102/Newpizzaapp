@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Newpizzaapp/static/css/main.a5376464.css",
-    "main.js": "/Newpizzaapp/static/js/main.0b2b41b3.js",
+    "main.css": "/Newpizzaapp/static/css/main.3aa36649.css",
+    "main.js": "/Newpizzaapp/static/js/main.26d02034.js",
     "static/js/453.410e70c2.chunk.js": "/Newpizzaapp/static/js/453.410e70c2.chunk.js",
     "static/media/bgpizza.jpg": "/Newpizzaapp/static/media/bgpizza.b751c3fcdac78fdb1f26.jpg",
     "static/media/bootstrap-icons.woff?": "/Newpizzaapp/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
@@ -11,12 +11,12 @@
     "static/media/fa-regular-400.woff2": "/Newpizzaapp/static/media/fa-regular-400.1f38a564cd9eae27ebc3.woff2",
     "static/media/fa-v4compatibility.woff2": "/Newpizzaapp/static/media/fa-v4compatibility.661bd6b7245d5205d3e1.woff2",
     "index.html": "/Newpizzaapp/index.html",
-    "main.a5376464.css.map": "/Newpizzaapp/static/css/main.a5376464.css.map",
-    "main.0b2b41b3.js.map": "/Newpizzaapp/static/js/main.0b2b41b3.js.map",
+    "main.3aa36649.css.map": "/Newpizzaapp/static/css/main.3aa36649.css.map",
+    "main.26d02034.js.map": "/Newpizzaapp/static/js/main.26d02034.js.map",
     "453.410e70c2.chunk.js.map": "/Newpizzaapp/static/js/453.410e70c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5376464.css",
-    "static/js/main.0b2b41b3.js"
+    "static/css/main.3aa36649.css",
+    "static/js/main.26d02034.js"
   ]
 }
